@@ -79,6 +79,12 @@
     <Compile Include="Basico2.Designer.cs">
       <DependentUpon>Basico2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Basico5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basico5.Designer.cs">
+      <DependentUpon>Basico5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Basico2.resx">
       <DependentUpon>Basico2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basico5.resx">
+      <DependentUpon>Basico5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
