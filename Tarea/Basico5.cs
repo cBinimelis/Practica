@@ -13,6 +13,7 @@ namespace Tarea
     public partial class Basico5 : Form
     {
         System.Windows.Forms.Timer TiempoDeCambio = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer TiempoDePrueba = new System.Windows.Forms.Timer();
         public Basico5()
         {
             InitializeComponent();
@@ -21,20 +22,29 @@ namespace Tarea
         private void Basico5_Load(object sender, EventArgs e)
         {
             TiempoDeCambio.Interval = 15000;
+            TiempoDePrueba.Interval = 120000;
             TiempoDeCambio.Tick += new EventHandler(TiempoCumplido);
+            TiempoDePrueba.Tick += new EventHandler(FinDeTiempo);
         }
+
+
         String salto = Environment.NewLine;
         Random Ran = new Random();
         int Ingreso;
         int Pregunta = 0;
         int Operacion;
-        String[] Respuestas = new String[10];
+        String[] Respuestas = new String[] { };
 
 
         private void TiempoCumplido(object sender, EventArgs e)
         {
             btn_cambio.Hide();
             TiempoDeCambio.Stop();
+        }
+        private void FinDeTiempo(object sender, EventArgs e)
+        {
+            TiempoDePrueba.Stop();
+            MuestraResultados();
         }
 
         protected void Elegir()
@@ -43,7 +53,7 @@ namespace Tarea
             {
                 btn_cambio.Show();
                 TiempoDeCambio.Start();
-                Operacion = Ran.Next(1, 3);
+                Operacion = Ran.Next(1, 4);
                 switch (Operacion)
                 {
                     case 1:
@@ -56,6 +66,11 @@ namespace Tarea
                         txt_Num1.Text = Convert.ToString(Ran.Next(1, 11));
                         txt_Num2.Text = Convert.ToString(Ran.Next(1, Convert.ToInt32(txt_Num1.Text)));
                         break;
+                    case 3:
+                        txt_operacion.Text = "x";
+                        txt_Num1.Text = Convert.ToString(Ran.Next(1, 101));
+                        txt_Num2.Text = Convert.ToString(Ran.Next(1, 11));
+                        break;
                 }
             }
             catch
@@ -66,31 +81,20 @@ namespace Tarea
 
         private void Actualizar()
         {
-            if (Pregunta < 10)
-            {
-                Elegir();
-                txt_restultado.Text = "";
-                lbl_NumPregunta.Text = Convert.ToString(Pregunta + 1);
-            }
-            else
-            {
-                MuestraResultados();
-            }
+            Elegir();
+            txt_restultado.Text = "";
+            lbl_NumPregunta.Text = Convert.ToString(Pregunta + 1);
         }
 
         private void MuestraResultados()
         {
+            String Mensaje = "";
+            for (int i = 0; i < Respuestas.Length; i++)
+            {
+                Mensaje += "Pregunta #" + i + 1 + " :" + salto + ".";
+            }
             MessageBox.Show("Respuestas" + salto +
-                "Respuesta #1 =" + Respuestas[0] + salto +
-                "Respuesta #2 =" + Respuestas[1] + salto +
-                "Respuesta #3 =" + Respuestas[2] + salto +
-                "Respuesta #4 =" + Respuestas[3] + salto +
-                "Respuesta #5 =" + Respuestas[4] + salto +
-                "Respuesta #6 =" + Respuestas[5] + salto +
-                "Respuesta #7 =" + Respuestas[6] + salto +
-                "Respuesta #8 =" + Respuestas[7] + salto +
-                "Respuesta #9 =" + Respuestas[8] + salto +
-                "Respuesta #10 =" + Respuestas[9], "Resultados Finales",
+                Mensaje, "Resultados Finales",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -118,6 +122,21 @@ namespace Tarea
                         }
                         break;
                     case 2:
+                        resultado = Convert.ToInt32(txt_Num1.Text) - Convert.ToInt32(txt_Num2.Text);
+                        if (Ingreso == resultado)
+                        {
+                            Respuestas[Pregunta] = "Respuesta correcta";
+                            Pregunta++;
+                            Actualizar();
+                        }
+                        else
+                        {
+                            Respuestas[Pregunta] = "Respuesta incorrecta";
+                            Pregunta++;
+                            Actualizar();
+                        }
+                        break;
+                    case 3:
                         resultado = Convert.ToInt32(txt_Num1.Text) - Convert.ToInt32(txt_Num2.Text);
                         if (Ingreso == resultado)
                         {
