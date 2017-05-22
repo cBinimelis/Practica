@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 using System.Windows.Forms;
 
 namespace Tarea
@@ -21,10 +15,12 @@ namespace Tarea
 
         private void Basico5_Load(object sender, EventArgs e)
         {
+            Actualizar();
             TiempoDeCambio.Interval = 15000;
-            TiempoDePrueba.Interval = 120000;
+            TiempoDePrueba.Interval = 12000;
             TiempoDeCambio.Tick += new EventHandler(TiempoCumplido);
             TiempoDePrueba.Tick += new EventHandler(FinDeTiempo);
+            TiempoDePrueba.Start();
         }
 
 
@@ -33,7 +29,7 @@ namespace Tarea
         int Ingreso;
         int Pregunta = 0;
         int Operacion;
-        String[] Respuestas = new String[] { };
+        ArrayList Respuestas = new ArrayList();
 
 
         private void TiempoCumplido(object sender, EventArgs e)
@@ -45,6 +41,7 @@ namespace Tarea
         {
             TiempoDePrueba.Stop();
             MuestraResultados();
+            
         }
 
         protected void Elegir()
@@ -89,9 +86,9 @@ namespace Tarea
         private void MuestraResultados()
         {
             String Mensaje = "";
-            for (int i = 0; i < Respuestas.Length; i++)
+            for (int i = 0; i < Respuestas.Count; i++)
             {
-                Mensaje += "Pregunta #" + i + 1 + " :" + salto + ".";
+                Mensaje += "Pregunta #" + (i + 1) + " :" + Respuestas[i].ToString() + "." + salto;
             }
             MessageBox.Show("Respuestas" + salto +
                 Mensaje, "Resultados Finales",
@@ -106,47 +103,50 @@ namespace Tarea
                 Ingreso = Convert.ToInt32(txt_restultado.Text);
                 switch (Operacion)
                 {
+                    //Suma
                     case 1:
                         resultado = Convert.ToInt32(txt_Num1.Text) + Convert.ToInt32(txt_Num2.Text);
                         if (Ingreso == resultado)
                         {
-                            Respuestas[Pregunta] = "Respuesta correcta";
+                            Respuestas.Add("Respuesta correcta");
                             Pregunta++;
                             Actualizar();
                         }
                         else
                         {
-                            Respuestas[Pregunta] = "Respuesta incorrecta";
+                            Respuestas.Add("Respuesta incorrecta");
                             Pregunta++;
                             Actualizar();
                         }
                         break;
+                    //Resta
                     case 2:
                         resultado = Convert.ToInt32(txt_Num1.Text) - Convert.ToInt32(txt_Num2.Text);
                         if (Ingreso == resultado)
                         {
-                            Respuestas[Pregunta] = "Respuesta correcta";
+                            Respuestas.Add("Respuesta correcta");
                             Pregunta++;
                             Actualizar();
                         }
                         else
                         {
-                            Respuestas[Pregunta] = "Respuesta incorrecta";
+                            Respuestas.Add("Respuesta incorrecta");
                             Pregunta++;
                             Actualizar();
                         }
                         break;
+                    //Multiplicacion
                     case 3:
-                        resultado = Convert.ToInt32(txt_Num1.Text) - Convert.ToInt32(txt_Num2.Text);
+                        resultado = Convert.ToInt32(txt_Num1.Text) * Convert.ToInt32(txt_Num2.Text);
                         if (Ingreso == resultado)
                         {
-                            Respuestas[Pregunta] = "Respuesta correcta";
+                            Respuestas.Add("Respuesta correcta");
                             Pregunta++;
                             Actualizar();
                         }
                         else
                         {
-                            Respuestas[Pregunta] = "Respuesta incorrecta";
+                            Respuestas.Add("Respuesta incorrecta");
                             Pregunta++;
                             Actualizar();
                         }
@@ -164,6 +164,11 @@ namespace Tarea
         {
             Form1 f1 = new Form1();
             f1.Show();
+        }
+
+        private void btn_cambio_Click(object sender, EventArgs e)
+        {
+            Actualizar();
         }
     }
 }

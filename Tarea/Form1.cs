@@ -35,5 +35,12 @@ namespace Tarea
         {
            
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Basico5 b5 = new Basico5();
+            b5.Show();
+            this.Hide();
+        }
     }
 }

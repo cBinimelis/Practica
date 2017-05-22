@@ -48,6 +48,7 @@
             this.btn_cambio.TabIndex = 26;
             this.btn_cambio.Text = "Cambiar Pregunta";
             this.btn_cambio.UseVisualStyleBackColor = true;
+            this.btn_cambio.Click += new System.EventHandler(this.btn_cambio_Click);
             // 
             // lbl_NumPregunta
             // 
@@ -73,7 +74,7 @@
             // 
             this.txt_restultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.txt_restultado.Location = new System.Drawing.Point(91, 145);
-            this.txt_restultado.MaxLength = 2;
+            this.txt_restultado.MaxLength = 4;
             this.txt_restultado.Multiline = true;
             this.txt_restultado.Name = "txt_restultado";
             this.txt_restultado.Size = new System.Drawing.Size(100, 54);
