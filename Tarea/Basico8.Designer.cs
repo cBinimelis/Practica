@@ -1,6 +1,6 @@
 ﻿namespace Tarea
 {
-    partial class Basico2
+    partial class Basico8
     {
         /// <summary>
         /// Required designer variable.
@@ -28,80 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Basico2));
+            this.btn_cambio = new System.Windows.Forms.Button();
             this.lbl_NumPregunta = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_restultado = new System.Windows.Forms.TextBox();
             this.btn_ingreso = new System.Windows.Forms.Button();
-            this.txt_operacion = new System.Windows.Forms.TextBox();
+            this.txt_operacion1 = new System.Windows.Forms.TextBox();
             this.txt_Num2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Num1 = new System.Windows.Forms.TextBox();
-            this.btn_cambio = new System.Windows.Forms.Button();
+            this.txt_operacion2 = new System.Windows.Forms.TextBox();
+            this.txt_Num3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // btn_cambio
+            // 
+            this.btn_cambio.Location = new System.Drawing.Point(12, 203);
+            this.btn_cambio.Name = "btn_cambio";
+            this.btn_cambio.Size = new System.Drawing.Size(205, 32);
+            this.btn_cambio.TabIndex = 35;
+            this.btn_cambio.Text = "Cambiar Pregunta";
+            this.btn_cambio.UseVisualStyleBackColor = true;
             // 
             // lbl_NumPregunta
             // 
             this.lbl_NumPregunta.AutoSize = true;
             this.lbl_NumPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lbl_NumPregunta.Location = new System.Drawing.Point(188, 10);
+            this.lbl_NumPregunta.Location = new System.Drawing.Point(188, 9);
             this.lbl_NumPregunta.Name = "lbl_NumPregunta";
             this.lbl_NumPregunta.Size = new System.Drawing.Size(23, 25);
-            this.lbl_NumPregunta.TabIndex = 16;
+            this.lbl_NumPregunta.TabIndex = 34;
             this.lbl_NumPregunta.Text = "0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label2.Location = new System.Drawing.Point(124, 103);
+            this.label2.Location = new System.Drawing.Point(203, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 39);
-            this.label2.TabIndex = 15;
+            this.label2.TabIndex = 33;
             this.label2.Text = "=";
             // 
             // txt_restultado
             // 
             this.txt_restultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.txt_restultado.Location = new System.Drawing.Point(91, 144);
-            this.txt_restultado.MaxLength = 2;
+            this.txt_restultado.Location = new System.Drawing.Point(172, 143);
+            this.txt_restultado.MaxLength = 4;
             this.txt_restultado.Multiline = true;
             this.txt_restultado.Name = "txt_restultado";
             this.txt_restultado.Size = new System.Drawing.Size(100, 54);
-            this.txt_restultado.TabIndex = 13;
+            this.txt_restultado.TabIndex = 31;
+            this.txt_restultado.Text = "5° Basico";
             this.txt_restultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_ingreso
             // 
-            this.btn_ingreso.Location = new System.Drawing.Point(146, 203);
+            this.btn_ingreso.Location = new System.Drawing.Point(223, 203);
             this.btn_ingreso.Name = "btn_ingreso";
-            this.btn_ingreso.Size = new System.Drawing.Size(126, 32);
-            this.btn_ingreso.TabIndex = 9;
+            this.btn_ingreso.Size = new System.Drawing.Size(205, 32);
+            this.btn_ingreso.TabIndex = 27;
             this.btn_ingreso.Text = "Ingresar";
             this.btn_ingreso.UseVisualStyleBackColor = true;
-            this.btn_ingreso.Click += new System.EventHandler(this.btn_ingreso_Click);
             // 
-            // txt_operacion
+            // txt_operacion1
             // 
-            this.txt_operacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_operacion.Location = new System.Drawing.Point(121, 62);
-            this.txt_operacion.Multiline = true;
-            this.txt_operacion.Name = "txt_operacion";
-            this.txt_operacion.ReadOnly = true;
-            this.txt_operacion.Size = new System.Drawing.Size(45, 38);
-            this.txt_operacion.TabIndex = 14;
-            this.txt_operacion.Text = "+";
-            this.txt_operacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_operacion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_operacion1.Location = new System.Drawing.Point(121, 52);
+            this.txt_operacion1.Multiline = true;
+            this.txt_operacion1.Name = "txt_operacion1";
+            this.txt_operacion1.ReadOnly = true;
+            this.txt_operacion1.Size = new System.Drawing.Size(45, 38);
+            this.txt_operacion1.TabIndex = 32;
+            this.txt_operacion1.Text = "+";
+            this.txt_operacion1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_Num2
             // 
             this.txt_Num2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.txt_Num2.Location = new System.Drawing.Point(172, 47);
+            this.txt_Num2.Location = new System.Drawing.Point(172, 37);
             this.txt_Num2.Multiline = true;
             this.txt_Num2.Name = "txt_Num2";
             this.txt_Num2.ReadOnly = true;
             this.txt_Num2.Size = new System.Drawing.Size(100, 54);
-            this.txt_Num2.TabIndex = 11;
+            this.txt_Num2.TabIndex = 29;
             this.txt_Num2.Text = "5";
             this.txt_Num2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -109,54 +119,68 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(75, 10);
+            this.label1.Location = new System.Drawing.Point(75, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 25);
-            this.label1.TabIndex = 12;
+            this.label1.TabIndex = 30;
             this.label1.Text = "Pregunta #";
             // 
             // txt_Num1
             // 
             this.txt_Num1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Num1.Location = new System.Drawing.Point(12, 47);
+            this.txt_Num1.Location = new System.Drawing.Point(12, 37);
             this.txt_Num1.Multiline = true;
             this.txt_Num1.Name = "txt_Num1";
             this.txt_Num1.ReadOnly = true;
             this.txt_Num1.Size = new System.Drawing.Size(103, 54);
-            this.txt_Num1.TabIndex = 10;
+            this.txt_Num1.TabIndex = 28;
             this.txt_Num1.Text = "45";
             this.txt_Num1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btn_cambio
+            // txt_operacion2
             // 
-            this.btn_cambio.Location = new System.Drawing.Point(12, 203);
-            this.btn_cambio.Name = "btn_cambio";
-            this.btn_cambio.Size = new System.Drawing.Size(126, 32);
-            this.btn_cambio.TabIndex = 17;
-            this.btn_cambio.Text = "Cambiar Pregunta";
-            this.btn_cambio.UseVisualStyleBackColor = true;
-            this.btn_cambio.Click += new System.EventHandler(this.btn_cambio_Click);
+            this.txt_operacion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_operacion2.Location = new System.Drawing.Point(277, 52);
+            this.txt_operacion2.Multiline = true;
+            this.txt_operacion2.Name = "txt_operacion2";
+            this.txt_operacion2.ReadOnly = true;
+            this.txt_operacion2.Size = new System.Drawing.Size(45, 38);
+            this.txt_operacion2.TabIndex = 37;
+            this.txt_operacion2.Text = "+";
+            this.txt_operacion2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Basico2
+            // txt_Num3
+            // 
+            this.txt_Num3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.txt_Num3.Location = new System.Drawing.Point(328, 37);
+            this.txt_Num3.Multiline = true;
+            this.txt_Num3.Name = "txt_Num3";
+            this.txt_Num3.ReadOnly = true;
+            this.txt_Num3.Size = new System.Drawing.Size(100, 54);
+            this.txt_Num3.TabIndex = 36;
+            this.txt_Num3.Text = "5";
+            this.txt_Num3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Basico8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 247);
+            this.ClientSize = new System.Drawing.Size(440, 247);
+            this.Controls.Add(this.txt_operacion2);
+            this.Controls.Add(this.txt_Num3);
             this.Controls.Add(this.btn_cambio);
             this.Controls.Add(this.lbl_NumPregunta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_restultado);
             this.Controls.Add(this.btn_ingreso);
-            this.Controls.Add(this.txt_operacion);
+            this.Controls.Add(this.txt_operacion1);
             this.Controls.Add(this.txt_Num2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Num1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Basico2";
+            this.Name = "Basico8";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "2° Basico";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Basico2_FormClosing_1);
-            this.Load += new System.EventHandler(this.Basico2_Load);
+            this.Text = "Basico8";
+            this.Load += new System.EventHandler(this.Basico8_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,14 +188,16 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btn_cambio;
         private System.Windows.Forms.Label lbl_NumPregunta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_restultado;
         private System.Windows.Forms.Button btn_ingreso;
-        private System.Windows.Forms.TextBox txt_operacion;
+        private System.Windows.Forms.TextBox txt_operacion1;
         private System.Windows.Forms.TextBox txt_Num2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Num1;
-        private System.Windows.Forms.Button btn_cambio;
+        private System.Windows.Forms.TextBox txt_operacion2;
+        private System.Windows.Forms.TextBox txt_Num3;
     }
 }

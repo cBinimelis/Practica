@@ -79,6 +79,7 @@
             this.txt_restultado.Name = "txt_restultado";
             this.txt_restultado.Size = new System.Drawing.Size(100, 54);
             this.txt_restultado.TabIndex = 22;
+            this.txt_restultado.Text = "5° Basico";
             this.txt_restultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_ingreso
@@ -154,7 +155,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Basico5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Basico5";
+            this.Text = "5° Basico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Basico5_FormClosing);
             this.Load += new System.EventHandler(this.Basico5_Load);
             this.ResumeLayout(false);

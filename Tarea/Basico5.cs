@@ -16,8 +16,8 @@ namespace Tarea
         private void Basico5_Load(object sender, EventArgs e)
         {
             Actualizar();
-            TiempoDeCambio.Interval = 15000;
-            TiempoDePrueba.Interval = 12000;
+            TiempoDeCambio.Interval = 10000;
+            TiempoDePrueba.Interval = 120000;
             TiempoDeCambio.Tick += new EventHandler(TiempoCumplido);
             TiempoDePrueba.Tick += new EventHandler(FinDeTiempo);
             TiempoDePrueba.Start();
@@ -55,12 +55,12 @@ namespace Tarea
                 {
                     case 1:
                         txt_operacion.Text = "+";
-                        txt_Num1.Text = Convert.ToString(Ran.Next(1, 11));
-                        txt_Num2.Text = Convert.ToString(Ran.Next(1, 11));
+                        txt_Num1.Text = Convert.ToString(Ran.Next(1, 101));
+                        txt_Num2.Text = Convert.ToString(Ran.Next(1, 101));
                         break;
                     case 2:
                         txt_operacion.Text = "-";
-                        txt_Num1.Text = Convert.ToString(Ran.Next(1, 11));
+                        txt_Num1.Text = Convert.ToString(Ran.Next(1, 101));
                         txt_Num2.Text = Convert.ToString(Ran.Next(1, Convert.ToInt32(txt_Num1.Text)));
                         break;
                     case 3:
